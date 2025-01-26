@@ -1,0 +1,13 @@
+{
+  "@@locale": "ar",  
+
+  "homeTitle": "الصفحة الرئيسية",
+
+  "settingsTitle": "الإعدادات",
+  "settingsThemeTitle": "المظهر",
+  "settingsThemeDarkTitle": "وضع الليل",
+  "settingsThemeLightTitle": "وضع النهار",
+  "settingsLanguagesTitle": "اللغات",
+  "settingsLanguagesEnglishTitle": "الإنجليزية",
+  "settingsLanguagesArabicTitle": "العربية"
+}

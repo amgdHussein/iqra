@@ -1,0 +1,13 @@
+{
+  "@@locale": "en",  
+
+  "homeTitle": "Home",
+
+  "settingsTitle": "Settings",
+  "settingsThemeTitle": "Theme",
+  "settingsThemeDarkTitle": "Dark",
+  "settingsThemeLightTitle": "Light",
+  "settingsLanguagesTitle": "Languages",
+  "settingsLanguagesEnglishTitle": "English",
+  "settingsLanguagesArabicTitle": "Arabic"
+}
