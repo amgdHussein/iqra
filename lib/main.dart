@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'app.dart';
-import 'blocs/blocs.dart';
-import 'configs/configs.dart';
+import 'core/blocs/blocs.dart';
+import 'core/l10n/localization_manager.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Load the localization
-  Locale appLocale = await LanguageConfig.loadLocalization();
+  Locale appLocale = await LanguageManager.loadLocalization();
 
   // Set the BlocObserver
   Bloc.observer = IqraBlocObserver();

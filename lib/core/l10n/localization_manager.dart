@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../core/enums/languages.dart';
 
-class LanguageConfig {
+class LanguageManager {
   static Future<Locale> loadLocalization() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     int languageCode = preferences.getInt('language') ?? 0;

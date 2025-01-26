@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../blocs/l10n/localization_bloc.dart';
+import '../blocs/l10n/localization_bloc.dart';
 import '../enums/languages.dart';
 
 class L10NDemoPage extends StatefulWidget {

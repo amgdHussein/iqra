@@ -5,7 +5,7 @@ class LocalizationState extends Equatable {
   const LocalizationState({required this.locale});
 
   factory LocalizationState.change({required Language language}) {
-    return LocalizationState(locale: LanguageConfig.getLocalization(language));
+    return LocalizationState(locale: LanguageManager.getLocalization(language));
   }
 
   @override
