@@ -28,6 +28,9 @@ void main() async {
         BlocProvider<ThemeBloc>(
           create: (BuildContext context) => ThemeBloc(appTheme),
         ),
+        BlocProvider<InternetConnectionBloc>(
+          create: (BuildContext context) => InternetConnectionBloc()..add(ListenConnection()),
+        ),
       ],
       child: const IqraApp(),
     ),

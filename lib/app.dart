@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'core/blocs/blocs.dart';
-import 'core/pages/theme_demo.dart';
+import 'core/pages/pages.dart';
 
 class IqraApp extends StatelessWidget {
   const IqraApp({super.key});
@@ -23,7 +23,15 @@ class IqraApp extends StatelessWidget {
               supportedLocales: AppLocalizations.supportedLocales,
               localeResolutionCallback: (Locale? locale, Iterable<Locale> supportedLocales) => locale,
               theme: themeState.theme,
-              home: ThemeDemoPage(),
+              home: BlocBuilder<InternetConnectionBloc, InternetConnectionState>(
+                builder: (connectionContext, connectionState) {
+                  if (connectionState.isConnected == false) {
+                    return const InternetConnectionPage();
+                  }
+
+                  return ThemeDemoPage();
+                },
+              ),
             );
           },
         );
