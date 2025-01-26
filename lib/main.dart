@@ -1,13 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'app.dart';
+import 'configs/firebase_options.dart';
 import 'core/blocs/blocs.dart';
 import 'core/l10n/localization_manager.dart';
 import 'core/themes/theme_manager.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   // Load the initial localization
   Locale appLocale = await LanguageManager.loadLocalization();

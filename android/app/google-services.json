@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1028357061619",
+    "firebase_url": "https://iqra-network-dev.firebaseio.com",
+    "project_id": "iqra-network-dev",
+    "storage_bucket": "iqra-network-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028357061619:android:48434206b3ff846778f086",
+        "android_client_info": {
+          "package_name": "com.example.iqra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028357061619-0q3phr0dn4r65pdlu2inqjlgjkvu2fb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9xmqDM8K3ieab_H8QrRc3P5gGHsCDpXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028357061619-0q3phr0dn4r65pdlu2inqjlgjkvu2fb1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1028357061619-4rq3bnmqcl1lh6top5383m5eanbkq6kd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.iqraDashboardApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,30 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "iqra-network-dev",
+          "appId": "1:1028357061619:android:48434206b3ff846778f086",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "iqra-network-dev",
+          "appId": "1:1028357061619:ios:51f050b7ea22b48778f086",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "iqra-network-dev",
+          "configurations": {
+            "android": "1:1028357061619:android:48434206b3ff846778f086",
+            "ios": "1:1028357061619:ios:51f050b7ea22b48778f086"
+          }
+        }
+      }
+    }
+  }
+}
