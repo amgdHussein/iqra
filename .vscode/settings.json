@@ -15,7 +15,9 @@
       120
     ],
   },
-  "cSpell.words": [],
+  "cSpell.words": [
+    "iqra"
+  ],
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }

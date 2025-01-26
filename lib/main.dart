@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+import 'blocs/blocs.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Set the BlocObserver
+  Bloc.observer = IqraBlocObserver();
+
+  // Run the app
   runApp(const MyApp());
 }
 
