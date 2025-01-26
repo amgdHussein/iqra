@@ -6,20 +6,23 @@ import 'dark_theme.dart';
 import 'light_theme.dart';
 
 class ThemeManager {
-  static Future<ThemeData> loadTheme() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    int themeCode = preferences.getInt('theme') ?? 0;
-    return _ModeMap[Mode.values.elementAt(themeCode)]!;
+  final SharedPreferences preferences;
+
+  ThemeManager(this.preferences);
+
+  ThemeData loadTheme() {
+    final int themeCode = preferences.getInt('theme') ?? 0;
+    final Mode mode = Mode.values.elementAt(themeCode);
+    return _themeMap[mode]!;
   }
 
-  static ThemeData getTheme(Mode mode) => _ModeMap[mode]!;
+  ThemeData getTheme(Mode mode) => _themeMap[mode]!;
 
-  static Future<void> setTheme(Mode mode) async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    preferences.setInt('theme', Mode.values.indexOf(mode));
+  Future<bool> setTheme(Mode mode) async {
+    return preferences.setInt('theme', Mode.values.indexOf(mode));
   }
 
-  static final Map<Mode, ThemeData> _ModeMap = {
+  final Map<Mode, ThemeData> _themeMap = {
     Mode.light: lightTheme,
     Mode.dark: darkTheme,
   };

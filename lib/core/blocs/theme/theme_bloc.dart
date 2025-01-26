@@ -9,12 +9,13 @@ part 'theme_event.dart';
 part 'theme_state.dart';
 
 class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
-  final ThemeData theme;
+  final ThemeManager themeManager;
 
-  ThemeBloc(this.theme) : super(ThemeState(theme: theme)) {
+  ThemeBloc(this.themeManager) : super(ThemeState(theme: themeManager.loadTheme())) {
     on<ThemeChanged>((event, emit) async {
-      await ThemeManager.setTheme(event.mode);
-      emit(ThemeState.change(mode: event.mode));
+      await themeManager.setTheme(event.mode);
+      final ThemeData theme = themeManager.getTheme(event.mode);
+      emit(ThemeState(theme: theme));
     });
   }
 }

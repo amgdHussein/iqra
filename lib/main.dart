@@ -7,6 +7,7 @@ import 'configs/firebase_options.dart';
 import 'core/blocs/blocs.dart';
 import 'core/l10n/localization_manager.dart';
 import 'core/themes/theme_manager.dart';
+import 'injection.dart' as di;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,11 +16,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // Load the initial localization
-  Locale appLocale = await LanguageManager.loadLocalization();
-
-  // Load the initial theme
-  ThemeData appTheme = await ThemeManager.loadTheme();
+  await di.initializeDependencies();
 
   // Set the BlocObserver
   Bloc.observer = IqraBlocObserver();
@@ -29,10 +26,10 @@ void main() async {
     MultiBlocProvider(
       providers: [
         BlocProvider<LocalizationBloc>(
-          create: (BuildContext context) => LocalizationBloc(appLocale),
+          create: (BuildContext context) => LocalizationBloc(di.getIt<LanguageManager>()),
         ),
         BlocProvider<ThemeBloc>(
-          create: (BuildContext context) => ThemeBloc(appTheme),
+          create: (BuildContext context) => ThemeBloc(di.getIt<ThemeManager>()),
         ),
         BlocProvider<InternetConnectionBloc>(
           create: (BuildContext context) => InternetConnectionBloc()..add(ListenConnection()),

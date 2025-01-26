@@ -9,12 +9,13 @@ part 'localization_event.dart';
 part 'localization_state.dart';
 
 class LocalizationBloc extends Bloc<LocalizationEvent, LocalizationState> {
-  final Locale locale;
+  final LanguageManager languageManager;
 
-  LocalizationBloc(this.locale) : super(LocalizationState(locale: locale)) {
+  LocalizationBloc(this.languageManager) : super(LocalizationState(locale: languageManager.loadLocalization())) {
     on<LocalizationChanged>((event, emit) async {
-      await LanguageManager.setLocalization(event.language);
-      emit(LocalizationState.change(language: event.language));
+      await languageManager.setLocalization(event.language);
+      final Locale locale = languageManager.getLocalization(event.language);
+      emit(LocalizationState(locale: locale));
     });
   }
 }

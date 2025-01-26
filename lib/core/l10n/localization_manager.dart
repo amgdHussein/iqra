@@ -4,20 +4,23 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../../core/enums/languages.dart';
 
 class LanguageManager {
-  static Future<Locale> loadLocalization() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    int languageCode = preferences.getInt('language') ?? 0;
-    return _localeMap[Language.values.elementAt(languageCode)]!;
+  final SharedPreferences preferences;
+
+  LanguageManager(this.preferences);
+
+  Locale loadLocalization() {
+    final int languageCode = preferences.getInt('language') ?? 0;
+    final Language language = Language.values.elementAt(languageCode);
+    return _localeMap[language]!;
   }
 
-  static Locale getLocalization(Language language) => _localeMap[language]!;
+  Locale getLocalization(Language language) => _localeMap[language]!;
 
-  static Future<void> setLocalization(Language language) async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    preferences.setInt('language', Language.values.indexOf(language));
+  Future<bool> setLocalization(Language language) async {
+    return preferences.setInt('language', Language.values.indexOf(language));
   }
 
-  static const Map<Language, Locale> _localeMap = {
+  final Map<Language, Locale> _localeMap = {
     Language.en: Locale('en'),
     Language.ar: Locale('ar'),
   };
