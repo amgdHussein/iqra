@@ -1,6 +1,7 @@
 export 'entities/user_entity.dart';
 export 'failures/auth_failure.dart';
 export 'repositories/auth_repository.dart';
+export 'usecases/apple_signin_usecase.dart';
 export 'usecases/google_signin_usecase.dart';
 export 'usecases/signin_usecase.dart';
 export 'usecases/signout_usecase.dart';

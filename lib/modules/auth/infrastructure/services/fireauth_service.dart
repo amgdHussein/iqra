@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 import '../../domain/failures/auth_failure.dart';
 import '../models/user_model.dart';
@@ -11,7 +12,7 @@ class FirebaseAuthService implements AuthService {
 
   @override
   Future<UserModel?> getUser() async {
-    final user = _firebaseAuth.currentUser;
+    final User? user = _firebaseAuth.currentUser;
     if (user != null) {
       return UserModel(id: user.uid, email: user.email!, name: user.displayName ?? '');
     }
@@ -43,14 +44,19 @@ class FirebaseAuthService implements AuthService {
       );
     } on FirebaseAuthException catch (e) {
       throw AuthFailure(message: _mapFirebaseAuthExceptionToMessage(e));
+    } catch (e) {
+      throw AuthFailure(message: "An unknown error occurred during sign-in.");
     }
   }
 
   @override
   Future<UserModel> signUpWithEmail(String email, String password) async {
     try {
-      final UserCredential result =
-          await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
+      final UserCredential result = await _firebaseAuth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
       return UserModel(
         id: result.user!.uid,
         email: result.user!.email!,
@@ -58,6 +64,8 @@ class FirebaseAuthService implements AuthService {
       );
     } on FirebaseAuthException catch (e) {
       throw AuthFailure(message: _mapFirebaseAuthExceptionToMessage(e));
+    } catch (e) {
+      throw AuthFailure(message: "An unknown error occurred during sign-up.");
     }
   }
 
@@ -66,12 +74,12 @@ class FirebaseAuthService implements AuthService {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
       final GoogleSignInAuthentication googleAuth = await googleUser!.authentication;
-      final credential = GoogleAuthProvider.credential(
+      final OAuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
 
-      final result = await _firebaseAuth.signInWithCredential(credential);
+      final UserCredential result = await _firebaseAuth.signInWithCredential(credential);
       return UserModel(
         id: result.user!.uid,
         email: result.user!.email!,
@@ -79,13 +87,38 @@ class FirebaseAuthService implements AuthService {
       );
     } on FirebaseAuthException catch (e) {
       throw AuthFailure(message: _mapFirebaseAuthExceptionToMessage(e));
+    } catch (e) {
+      throw AuthFailure(message: "An unknown error occurred during Google sign-in.");
     }
   }
 
   @override
-  Future<UserModel> signInWithApple() {
-    // TODO: implement signInWithApple
-    throw UnimplementedError();
+  Future<UserModel> signInWithApple() async {
+    try {
+      final AuthorizationCredentialAppleID credential = await SignInWithApple.getAppleIDCredential(
+        scopes: [
+          AppleIDAuthorizationScopes.email,
+          AppleIDAuthorizationScopes.fullName,
+        ],
+      );
+
+      final OAuthCredential appleCredential = OAuthProvider("apple.com").credential(
+        idToken: credential.identityToken,
+        accessToken: credential.authorizationCode,
+      );
+
+      final UserCredential userCredential = await _firebaseAuth.signInWithCredential(appleCredential);
+
+      return UserModel(
+        id: userCredential.user!.uid,
+        email: userCredential.user!.email!,
+        name: userCredential.user!.displayName ?? '',
+      );
+    } on FirebaseAuthException catch (e) {
+      throw AuthFailure(message: _mapFirebaseAuthExceptionToMessage(e));
+    } catch (e) {
+      throw AuthFailure(message: "An unknown error occurred during Apple sign-in.");
+    }
   }
 
   @override
@@ -101,6 +134,8 @@ class FirebaseAuthService implements AuthService {
       await _googleSignIn.signOut();
     } on FirebaseAuthException catch (e) {
       throw AuthFailure(message: _mapFirebaseAuthExceptionToMessage(e));
+    } catch (e) {
+      throw AuthFailure(message: "An unknown error occurred during sign-out.");
     }
   }
 

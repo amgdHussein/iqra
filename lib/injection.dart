@@ -30,6 +30,7 @@ Future<void> initializeDependencies() async {
   getIt.registerLazySingleton<SignUpWithEmail>(() => SignUpWithEmail(repository: getIt<AuthRepository>()));
   getIt.registerLazySingleton<SignInWithEmail>(() => SignInWithEmail(repository: getIt<AuthRepository>()));
   getIt.registerLazySingleton<SignInWithGoogle>(() => SignInWithGoogle(repository: getIt<AuthRepository>()));
+  getIt.registerLazySingleton<SignInWithApple>(() => SignInWithApple(repository: getIt<AuthRepository>()));
   getIt.registerLazySingleton<SignOut>(() => SignOut(repository: getIt<AuthRepository>()));
   getIt.registerLazySingleton<SubscribeAuthChanges>(() => SubscribeAuthChanges(repository: getIt<AuthRepository>()));
 
@@ -40,6 +41,7 @@ Future<void> initializeDependencies() async {
       signUpWithEmail: getIt<SignUpWithEmail>(),
       signInWithEmail: getIt<SignInWithEmail>(),
       signInWithGoogle: getIt<SignInWithGoogle>(),
+      signInWithApple: getIt<SignInWithApple>(),
       signOut: getIt<SignOut>(),
     ),
   );

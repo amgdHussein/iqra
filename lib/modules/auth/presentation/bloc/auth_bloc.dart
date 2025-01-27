@@ -11,6 +11,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final SignInWithEmail signInWithEmail;
   final SignUpWithEmail signUpWithEmail;
   final SignInWithGoogle signInWithGoogle;
+  final SignInWithApple signInWithApple;
   final SignOut signOut;
 
   AuthBloc({
@@ -18,6 +19,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     required this.signInWithEmail,
     required this.signUpWithEmail,
     required this.signInWithGoogle,
+    required this.signInWithApple,
     required this.signOut,
   }) : super(AuthState.initial()) {
     // When the Bloc is first created, we will listen to the authentication state changes and emit the appropriate states
@@ -79,6 +81,18 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(AuthState(status: AuthStatus.loading));
 
       final result = await signInWithGoogle();
+
+      return result.fold(
+        (failure) => emit(AuthError(status: AuthStatus.error, error: failure.message)),
+        (user) => emit(AuthState(status: AuthStatus.authenticated)),
+      );
+    });
+
+    // When User Presses the Apple Login Button, we will send the AppleSignInRequest Event to the AuthBloc to handle it and emit the Authenticated State if the user is authenticated
+    on<AppleSignInRequested>((event, emit) async {
+      emit(AuthState(status: AuthStatus.loading));
+
+      final result = await signInWithApple();
 
       return result.fold(
         (failure) => emit(AuthError(status: AuthStatus.error, error: failure.message)),

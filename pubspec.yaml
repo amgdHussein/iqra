@@ -50,6 +50,7 @@ dependencies:
   google_sign_in: ^6.2.2
   dartz: ^0.10.1
   get_it: ^8.0.3
+  sign_in_with_apple: ^6.1.4
 
 dev_dependencies:
   flutter_test:

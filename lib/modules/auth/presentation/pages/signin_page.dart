@@ -54,6 +54,13 @@ class SignInPage extends StatelessWidget {
                     },
                     child: const Text('Google Sign In'),
                   ),
+                  const SizedBox(height: 30),
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<AuthBloc>().add(AppleSignInRequested());
+                    },
+                    child: const Text('Apple Sign In'),
+                  ),
                 ],
               ),
             );
