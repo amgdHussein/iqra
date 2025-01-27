@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+  <!-- Google Sign-in, Copied from GoogleService-Info.plist -->
+  <key>GIDClientID</key>
+  <!-- TODO Replace this value: with your IOS client ID -->
+  <string>1028357061619-cgkdqtlv7f3jtionlfdnhudpta8pus8k.apps.googleusercontent.com</string>
+  <key>CFBundleURLTypes</key>
+  <array>
+      <dict>
+          <key>CFBundleTypeRole</key>
+          <string>Editor</string>
+          <key>CFBundleURLSchemes</key>
+          <array>
+              <!-- TODO Replace this value: with your IOS reversed client ID -->
+              <string>com.googleusercontent.apps.1028357061619-cgkdqtlv7f3jtionlfdnhudpta8pus8k</string>
+          </array>
+      </dict>
+  </array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
