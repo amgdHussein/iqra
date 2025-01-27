@@ -2,11 +2,18 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'app.dart';
+// Import the generated files
 import 'configs/firebase_options.dart';
+
+// Core
 import 'core/blocs/blocs.dart';
 import 'core/l10n/localization_manager.dart';
 import 'core/themes/theme_manager.dart';
+
+// Feathers
+import 'modules/auth/presentation/bloc/auth_bloc.dart';
+
+import 'app.dart';
 import 'injection.dart' as di;
 
 void main() async {
@@ -33,6 +40,9 @@ void main() async {
         ),
         BlocProvider<InternetConnectionBloc>(
           create: (BuildContext context) => InternetConnectionBloc()..add(ListenConnection()),
+        ),
+        BlocProvider<AuthBloc>(
+          create: (BuildContext context) => di.getIt<AuthBloc>()..add(ListenAuthentication()),
         ),
       ],
       child: const IqraApp(),
