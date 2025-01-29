@@ -94,15 +94,24 @@ class FirebaseAuthService implements AuthService {
 
   @override
   Future<UserModel> signInWithApple() async {
+    final OAuthProvider oAuthProvider = OAuthProvider("apple.com");
+
+    final String clientId = 'com.iqranetwork.dashboard.authentication.service';
+    final String redirectUrl = 'https://auth.iqranetwork.com/__/auth/handler';
+
     try {
       final AuthorizationCredentialAppleID credential = await SignInWithApple.getAppleIDCredential(
+        webAuthenticationOptions: WebAuthenticationOptions(
+          clientId: clientId,
+          redirectUri: Uri.parse(redirectUrl),
+        ),
         scopes: [
           AppleIDAuthorizationScopes.email,
           AppleIDAuthorizationScopes.fullName,
         ],
       );
 
-      final OAuthCredential appleCredential = OAuthProvider("apple.com").credential(
+      final OAuthCredential appleCredential = oAuthProvider.credential(
         idToken: credential.identityToken,
         accessToken: credential.authorizationCode,
       );
@@ -122,9 +131,14 @@ class FirebaseAuthService implements AuthService {
   }
 
   @override
-  Future<void> resetPassword(String email) {
-    // TODO: implement resetPassword
-    throw UnimplementedError();
+  Future<void> resetPassword(String email) async {
+    try {
+      await _firebaseAuth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      throw AuthFailure(message: _mapFirebaseAuthExceptionToMessage(e));
+    } catch (e) {
+      throw AuthFailure(message: "An unknown error occurred while sending the password reset email.");
+    }
   }
 
   @override

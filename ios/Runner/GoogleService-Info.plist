@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1028357061619-cgkdqtlv7f3jtionlfdnhudpta8pus8k.apps.googleusercontent.com</string>
+	<string>375631617862-jbclobfnkhc4b4k1v4jthv3041486ujo.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1028357061619-cgkdqtlv7f3jtionlfdnhudpta8pus8k</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>1028357061619-gjt65m8ug2a1v31rmc0766ejjjj1jnhn.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.375631617862-jbclobfnkhc4b4k1v4jthv3041486ujo</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC8_tBk57onxfokmmxoqkr4L3IqSrUgG80</string>
+	<string>AIzaSyBdPO5etT23ZasVwiwbU7T00cXqRoiyZwY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1028357061619</string>
+	<string>375631617862</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.iqra</string>
+	<string>com.iqranetwork.dashboard</string>
 	<key>PROJECT_ID</key>
-	<string>iqra-network-dev</string>
+	<string>iqra-network</string>
 	<key>STORAGE_BUCKET</key>
-	<string>iqra-network-dev.appspot.com</string>
+	<string>iqra-network.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1028357061619:ios:51f050b7ea22b48778f086</string>
+	<string>1:375631617862:ios:6b717b5110319eae33cf47</string>
 	<key>DATABASE_URL</key>
-	<string>https://iqra-network-dev.firebaseio.com</string>
+	<string>https://iqra-network.firebaseio.com</string>
 </dict>
 </plist>

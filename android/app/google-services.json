@@ -1,49 +1,77 @@
 {
   "project_info": {
-    "project_number": "1028357061619",
-    "firebase_url": "https://iqra-network-dev.firebaseio.com",
-    "project_id": "iqra-network-dev",
-    "storage_bucket": "iqra-network-dev.appspot.com"
+    "project_number": "375631617862",
+    "firebase_url": "https://iqra-network.firebaseio.com",
+    "project_id": "iqra-network",
+    "storage_bucket": "iqra-network.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1028357061619:android:48434206b3ff846778f086",
+        "mobilesdk_app_id": "1:375631617862:android:9e6f211caeacd85633cf47",
         "android_client_info": {
-          "package_name": "com.example.iqra"
+          "package_name": "com.iqranetwork.dashboard"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1028357061619-gjt65m8ug2a1v31rmc0766ejjjj1jnhn.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.iqra",
-            "certificate_hash": "67e3e0e2dfe048481aca503a42340011fae5398b"
-          }
-        },
-        {
-          "client_id": "1028357061619-0q3phr0dn4r65pdlu2inqjlgjkvu2fb1.apps.googleusercontent.com",
+          "client_id": "375631617862-apvt4fnd1l8cbbarfmceckuqognon1g9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA9xmqDM8K3ieab_H8QrRc3P5gGHsCDpXM"
+          "current_key": "AIzaSyAog80OtNZmi32bv_pEAndrzqNsq-HTaA0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1028357061619-0q3phr0dn4r65pdlu2inqjlgjkvu2fb1.apps.googleusercontent.com",
+              "client_id": "106571015918526831431",
               "client_type": 3
             },
             {
-              "client_id": "1028357061619-4rq3bnmqcl1lh6top5383m5eanbkq6kd.apps.googleusercontent.com",
+              "client_id": "375631617862-jbclobfnkhc4b4k1v4jthv3041486ujo.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.iqraDashboardApp"
+                "bundle_id": "com.iqranetwork.dashboard"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375631617862:android:7c174da72eba767933cf47",
+        "android_client_info": {
+          "package_name": "com.iqranetwork.dashboard.twa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375631617862-apvt4fnd1l8cbbarfmceckuqognon1g9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAog80OtNZmi32bv_pEAndrzqNsq-HTaA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106571015918526831431",
+              "client_type": 3
+            },
+            {
+              "client_id": "375631617862-jbclobfnkhc4b4k1v4jthv3041486ujo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iqranetwork.dashboard"
               }
             }
           ]

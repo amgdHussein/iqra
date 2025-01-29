@@ -5,7 +5,7 @@
   <!-- Google Sign-in, Copied from GoogleService-Info.plist -->
   <key>GIDClientID</key>
   <!-- TODO Replace this value: with your IOS client ID -->
-  <string>1028357061619-cgkdqtlv7f3jtionlfdnhudpta8pus8k.apps.googleusercontent.com</string>
+  <string>375631617862-jbclobfnkhc4b4k1v4jthv3041486ujo.apps.googleusercontent.com</string>
   <key>CFBundleURLTypes</key>
   <array>
       <dict>
@@ -14,7 +14,7 @@
           <key>CFBundleURLSchemes</key>
           <array>
               <!-- TODO Replace this value: with your IOS reversed client ID -->
-              <string>com.googleusercontent.apps.1028357061619-cgkdqtlv7f3jtionlfdnhudpta8pus8k</string>
+              <string>com.googleusercontent.apps.375631617862-jbclobfnkhc4b4k1v4jthv3041486ujo</string>
           </array>
       </dict>
   </array>

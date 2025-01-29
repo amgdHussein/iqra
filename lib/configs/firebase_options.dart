@@ -49,23 +49,22 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA9xmqDM8K3ieab_H8QrRc3P5gGHsCDpXM',
-    appId: '1:1028357061619:android:48434206b3ff846778f086',
-    messagingSenderId: '1028357061619',
-    projectId: 'iqra-network-dev',
-    databaseURL: 'https://iqra-network-dev.firebaseio.com',
-    storageBucket: 'iqra-network-dev.appspot.com',
+    apiKey: 'AIzaSyAog80OtNZmi32bv_pEAndrzqNsq-HTaA0',
+    appId: '1:375631617862:android:9e6f211caeacd85633cf47',
+    messagingSenderId: '375631617862',
+    projectId: 'iqra-network',
+    databaseURL: 'https://iqra-network.firebaseio.com',
+    storageBucket: 'iqra-network.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC8_tBk57onxfokmmxoqkr4L3IqSrUgG80',
-    appId: '1:1028357061619:ios:51f050b7ea22b48778f086',
-    messagingSenderId: '1028357061619',
-    projectId: 'iqra-network-dev',
-    databaseURL: 'https://iqra-network-dev.firebaseio.com',
-    storageBucket: 'iqra-network-dev.appspot.com',
-    androidClientId: '1028357061619-h0uiqhviprgdgpogfqm65jjonlo6ddi6.apps.googleusercontent.com',
-    iosClientId: '1028357061619-cgkdqtlv7f3jtionlfdnhudpta8pus8k.apps.googleusercontent.com',
-    iosBundleId: 'com.example.iqra',
+    apiKey: 'AIzaSyBdPO5etT23ZasVwiwbU7T00cXqRoiyZwY',
+    appId: '1:375631617862:ios:6b717b5110319eae33cf47',
+    messagingSenderId: '375631617862',
+    projectId: 'iqra-network',
+    databaseURL: 'https://iqra-network.firebaseio.com',
+    storageBucket: 'iqra-network.appspot.com',
+    iosClientId: '375631617862-jbclobfnkhc4b4k1v4jthv3041486ujo.apps.googleusercontent.com',
+    iosBundleId: 'com.iqranetwork.dashboard',
   );
 }
