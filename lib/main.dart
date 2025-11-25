@@ -44,6 +44,9 @@ void main() async {
         BlocProvider<AuthBloc>(
           create: (BuildContext context) => di.getIt<AuthBloc>()..add(ListenAuthentication()),
         ),
+        BlocProvider<NavigationBloc>(
+          create: (BuildContext context) => NavigationBloc(),
+        ),
       ],
       child: const IqraApp(),
     ),

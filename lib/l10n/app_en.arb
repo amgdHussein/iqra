@@ -1,8 +1,18 @@
 {
-  "@@locale": "en",  
-
+  "@@locale": "en",
   "homeTitle": "Home",
-
+  "homeWelcome": "Welcome",
+  "homeGreeting": "Hello",
+  "homeSignOut": "Sign Out",
+  "homeQuickActions": "Quick Actions",
+  "homeStatistics": "View Statistics",
+  "homeStatisticsDesc": "Check your progress and analytics",
+  "homeNotes": "My Notes",
+  "homeNotesDesc": "Access your saved notes",
+  "homeRoadmap": "Learning Roadmap",
+  "homeRoadmapDesc": "Track your learning journey",
+  "homeProfile": "My Profile",
+  "homeProfileDesc": "Manage your account settings",
   "settingsTitle": "Settings",
   "settingsThemeTitle": "Theme",
   "settingsThemeDarkTitle": "Dark",

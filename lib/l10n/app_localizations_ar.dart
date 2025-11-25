@@ -12,6 +12,42 @@ class AppLocalizationsAr extends AppLocalizations {
   String get homeTitle => 'الصفحة الرئيسية';
 
   @override
+  String get homeWelcome => 'مرحباً بك';
+
+  @override
+  String get homeGreeting => 'مرحباً';
+
+  @override
+  String get homeSignOut => 'تسجيل الخروج';
+
+  @override
+  String get homeQuickActions => 'الإجراءات السريعة';
+
+  @override
+  String get homeStatistics => 'عرض الإحصائيات';
+
+  @override
+  String get homeStatisticsDesc => 'تحقق من تقدمك وتحليلاتك';
+
+  @override
+  String get homeNotes => 'ملاحظاتي';
+
+  @override
+  String get homeNotesDesc => 'الوصول إلى ملاحظاتك المحفوظة';
+
+  @override
+  String get homeRoadmap => 'خارطة التعلم';
+
+  @override
+  String get homeRoadmapDesc => 'تتبع رحلة التعلم الخاصة بك';
+
+  @override
+  String get homeProfile => 'ملفي الشخصي';
+
+  @override
+  String get homeProfileDesc => 'إدارة إعدادات حسابك';
+
+  @override
   String get settingsTitle => 'الإعدادات';
 
   @override

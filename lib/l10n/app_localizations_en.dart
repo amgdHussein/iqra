@@ -12,6 +12,42 @@ class AppLocalizationsEn extends AppLocalizations {
   String get homeTitle => 'Home';
 
   @override
+  String get homeWelcome => 'Welcome';
+
+  @override
+  String get homeGreeting => 'Hello';
+
+  @override
+  String get homeSignOut => 'Sign Out';
+
+  @override
+  String get homeQuickActions => 'Quick Actions';
+
+  @override
+  String get homeStatistics => 'View Statistics';
+
+  @override
+  String get homeStatisticsDesc => 'Check your progress and analytics';
+
+  @override
+  String get homeNotes => 'My Notes';
+
+  @override
+  String get homeNotesDesc => 'Access your saved notes';
+
+  @override
+  String get homeRoadmap => 'Learning Roadmap';
+
+  @override
+  String get homeRoadmapDesc => 'Track your learning journey';
+
+  @override
+  String get homeProfile => 'My Profile';
+
+  @override
+  String get homeProfileDesc => 'Manage your account settings';
+
+  @override
   String get settingsTitle => 'Settings';
 
   @override

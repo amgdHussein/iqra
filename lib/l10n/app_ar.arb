@@ -1,8 +1,18 @@
 {
-  "@@locale": "ar",  
-
+  "@@locale": "ar",
   "homeTitle": "الصفحة الرئيسية",
-
+  "homeWelcome": "مرحباً بك",
+  "homeGreeting": "مرحباً",
+  "homeSignOut": "تسجيل الخروج",
+  "homeQuickActions": "الإجراءات السريعة",
+  "homeStatistics": "عرض الإحصائيات",
+  "homeStatisticsDesc": "تحقق من تقدمك وتحليلاتك",
+  "homeNotes": "ملاحظاتي",
+  "homeNotesDesc": "الوصول إلى ملاحظاتك المحفوظة",
+  "homeRoadmap": "خارطة التعلم",
+  "homeRoadmapDesc": "تتبع رحلة التعلم الخاصة بك",
+  "homeProfile": "ملفي الشخصي",
+  "homeProfileDesc": "إدارة إعدادات حسابك",
   "settingsTitle": "الإعدادات",
   "settingsThemeTitle": "المظهر",
   "settingsThemeDarkTitle": "وضع الليل",

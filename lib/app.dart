@@ -5,6 +5,7 @@ import 'core/blocs/blocs.dart';
 import 'core/pages/pages.dart';
 import 'l10n/app_localizations.dart';
 import 'modules/auth/auth.dart';
+import 'modules/client/client.dart';
 
 class IqraApp extends StatelessWidget {
   const IqraApp({super.key});
@@ -35,7 +36,7 @@ class IqraApp extends StatelessWidget {
                         return SignInPage();
                       }
 
-                      return AuthDemoPage();
+                      return ClientLayout();
                     },
                   );
                 },

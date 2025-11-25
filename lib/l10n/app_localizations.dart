@@ -104,6 +104,78 @@ abstract class AppLocalizations {
   /// **'Home'**
   String get homeTitle;
 
+  /// No description provided for @homeWelcome.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome'**
+  String get homeWelcome;
+
+  /// No description provided for @homeGreeting.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello'**
+  String get homeGreeting;
+
+  /// No description provided for @homeSignOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Out'**
+  String get homeSignOut;
+
+  /// No description provided for @homeQuickActions.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Actions'**
+  String get homeQuickActions;
+
+  /// No description provided for @homeStatistics.
+  ///
+  /// In en, this message translates to:
+  /// **'View Statistics'**
+  String get homeStatistics;
+
+  /// No description provided for @homeStatisticsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your progress and analytics'**
+  String get homeStatisticsDesc;
+
+  /// No description provided for @homeNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'My Notes'**
+  String get homeNotes;
+
+  /// No description provided for @homeNotesDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Access your saved notes'**
+  String get homeNotesDesc;
+
+  /// No description provided for @homeRoadmap.
+  ///
+  /// In en, this message translates to:
+  /// **'Learning Roadmap'**
+  String get homeRoadmap;
+
+  /// No description provided for @homeRoadmapDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Track your learning journey'**
+  String get homeRoadmapDesc;
+
+  /// No description provided for @homeProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'My Profile'**
+  String get homeProfile;
+
+  /// No description provided for @homeProfileDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage your account settings'**
+  String get homeProfileDesc;
+
   /// No description provided for @settingsTitle.
   ///
   /// In en, this message translates to:
