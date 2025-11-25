@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../core/enums/languages.dart';
+import '../enums/languages.dart';
 
 class LanguageManager {
   final SharedPreferences preferences;
