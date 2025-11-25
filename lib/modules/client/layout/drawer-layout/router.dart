@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/animations/animations.dart';
-import '../../../core/blocs/navigation/navigation_bloc.dart';
-import '../../../core/enums/navigation_destination.dart';
-import 'lookups.dart';
+import '../../../../core/animations/animations.dart';
+import '../../../../core/blocs/navigation/navigation_bloc.dart';
+import '../../../../core/enums/navigation_destination.dart';
+import '../lookups.dart';
 
 class AppRouter {
   static void replacePage(BuildContext context, Destination destination) {

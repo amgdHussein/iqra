@@ -36,7 +36,12 @@ class IqraApp extends StatelessWidget {
                         return SignInPage();
                       }
 
-                      return ClientLayout();
+                      // You can switch between layouts here based on user role
+                      // For now, using BottomNavLayout with bottom navigation
+                      return const BottomNavLayout();
+
+                      // Use this for drawer-based navigation:
+                      // return const DrawerLayout();
                     },
                   );
                 },

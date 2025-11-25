@@ -67,4 +67,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsLanguagesArabicTitle => 'Arabic';
+
+  @override
+  String get lessonsTitle => 'Lessons';
+
+  @override
+  String get homeworkTitle => 'Homework';
+
+  @override
+  String get progressTitle => 'Progress';
+
+  @override
+  String get menuTitle => 'Menu';
 }

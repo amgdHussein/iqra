@@ -19,5 +19,10 @@
   "settingsThemeLightTitle": "Light",
   "settingsLanguagesTitle": "Languages",
   "settingsLanguagesEnglishTitle": "English",
-  "settingsLanguagesArabicTitle": "Arabic"
+  "settingsLanguagesArabicTitle": "Arabic",
+
+  "lessonsTitle": "Lessons",
+  "homeworkTitle": "Homework",
+  "progressTitle": "Progress",
+  "menuTitle": "Menu"
 }

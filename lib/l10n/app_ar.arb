@@ -19,5 +19,10 @@
   "settingsThemeLightTitle": "وضع النهار",
   "settingsLanguagesTitle": "اللغات",
   "settingsLanguagesEnglishTitle": "الإنجليزية",
-  "settingsLanguagesArabicTitle": "العربية"
+  "settingsLanguagesArabicTitle": "العربية",
+
+  "lessonsTitle": "الدروس",
+  "homeworkTitle": "الواجبات",
+  "progressTitle": "التقدم",
+  "menuTitle": "القائمة"
 }

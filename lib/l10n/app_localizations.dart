@@ -217,6 +217,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Arabic'**
   String get settingsLanguagesArabicTitle;
+
+  /// No description provided for @lessonsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Lessons'**
+  String get lessonsTitle;
+
+  /// No description provided for @homeworkTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Homework'**
+  String get homeworkTitle;
+
+  /// No description provided for @progressTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress'**
+  String get progressTitle;
+
+  /// No description provided for @menuTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Menu'**
+  String get menuTitle;
 }
 
 class _AppLocalizationsDelegate

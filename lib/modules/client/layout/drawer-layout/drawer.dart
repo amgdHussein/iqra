@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/enums/navigation_destination.dart';
-import '../../../core/models/navigation_item.dart';
-import 'lookups.dart';
+import '../../../../core/enums/navigation_destination.dart';
+import '../../../../core/models/navigation_item.dart';
+import '../lookups.dart';
 import 'router.dart';
 
 class AppDrawer extends StatelessWidget {
