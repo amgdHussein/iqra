@@ -78,5 +78,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get progressTitle => 'التقدم';
 
   @override
+  String get syllabusTitle => 'المنهج';
+
+  @override
   String get menuTitle => 'القائمة';
 }

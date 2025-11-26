@@ -51,6 +51,7 @@ dependencies:
   dartz: ^0.10.1
   get_it: ^8.0.3
   sign_in_with_apple: ^6.1.4
+  webview_flutter: ^4.10.0
 
 dev_dependencies:
   flutter_test:

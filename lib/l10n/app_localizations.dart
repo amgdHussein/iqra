@@ -236,6 +236,12 @@ abstract class AppLocalizations {
   /// **'Progress'**
   String get progressTitle;
 
+  /// No description provided for @syllabusTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Syllabus'**
+  String get syllabusTitle;
+
   /// No description provided for @menuTitle.
   ///
   /// In en, this message translates to:

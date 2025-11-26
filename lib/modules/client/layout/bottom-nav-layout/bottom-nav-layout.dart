@@ -50,7 +50,7 @@ class BottomNavLayout extends StatelessWidget {
             const SizedBox(width: 8),
             Flexible(
               child: Text(
-                'Abdelraheem Ahmed',
+                'Amgad Hussein',
                 style: theme.textTheme.bodyMedium?.copyWith(
                   fontWeight: FontWeight.w500,
                   color: Colors.black87,
@@ -147,6 +147,7 @@ class BottomNavLayout extends StatelessWidget {
     return destination == Destination.lessons ||
         destination == Destination.homework ||
         destination == Destination.progress ||
+        destination == Destination.syllabus ||
         destination == Destination.menu;
   }
 
@@ -154,10 +155,12 @@ class BottomNavLayout extends StatelessWidget {
     BuildContext context,
     Destination currentDestination,
   ) {
+    final theme = Theme.of(context);
     final destinations = [
       Destination.lessons,
       Destination.homework,
       Destination.progress,
+      Destination.syllabus,
       Destination.menu,
     ];
 
@@ -182,7 +185,7 @@ class BottomNavLayout extends StatelessWidget {
         return NavigationDestination(
           icon: Icon(
             navItem.icon,
-            color: isSelected ? Colors.blue : Colors.grey.shade600,
+            color: isSelected ? theme.colorScheme.primary : Colors.grey.shade600,
           ),
           label: navItem.title,
         );

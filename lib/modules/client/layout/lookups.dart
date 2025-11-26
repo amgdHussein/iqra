@@ -8,6 +8,7 @@ import '../screens/homework_screen.dart';
 import '../screens/lessons_screen.dart';
 import '../screens/progress_screen.dart';
 import '../screens/settings_screen.dart';
+import '../screens/syllabus_screen.dart';
 import 'floating_action_button.dart';
 
 Widget lookupScreen(Destination destination) {
@@ -26,6 +27,9 @@ Widget lookupScreen(Destination destination) {
 
     case Destination.progress:
       return const ProgressScreen();
+
+    case Destination.syllabus:
+      return const SyllabusScreen();
 
     case Destination.menu:
       return const SettingsScreen();
@@ -96,6 +100,13 @@ NavigationItem lookupNavigationItem(BuildContext context, Destination destinatio
         destination: Destination.progress,
         title: l10n.progressTitle,
         icon: Icons.analytics,
+      );
+
+    case Destination.syllabus:
+      return NavigationItem(
+        destination: Destination.syllabus,
+        title: l10n.syllabusTitle,
+        icon: Icons.book,
       );
 
     case Destination.menu:

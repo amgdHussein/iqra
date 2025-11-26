@@ -78,5 +78,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get progressTitle => 'Progress';
 
   @override
+  String get syllabusTitle => 'Syllabus';
+
+  @override
   String get menuTitle => 'Menu';
 }

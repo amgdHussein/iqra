@@ -71,9 +71,9 @@ class _LessonsScreenState extends State<LessonsScreen> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(
-        color: const Color(0xFFE3F2FD),
+        color: theme.colorScheme.primaryContainer,
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: Colors.blue.shade100),
+        border: Border.all(color: theme.colorScheme.primary.withValues(alpha: 0.2)),
       ),
       child: Row(
         children: [
@@ -107,8 +107,8 @@ class _LessonsScreenState extends State<LessonsScreen> {
               );
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF2196F3),
-              foregroundColor: Colors.white,
+              backgroundColor: theme.colorScheme.primary,
+              foregroundColor: theme.colorScheme.onPrimary,
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(6),
@@ -151,7 +151,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
               ),
             ),
             const SizedBox(width: 4),
-            Icon(Icons.chevron_right, color: Colors.blue, size: 24),
+            Icon(Icons.chevron_right, color: theme.colorScheme.primary, size: 24),
           ],
         ),
         Row(
@@ -165,7 +165,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
                   );
                 });
               },
-              icon: Icon(Icons.chevron_left, color: Colors.blue),
+              icon: Icon(Icons.chevron_left, color: theme.colorScheme.primary),
               visualDensity: VisualDensity.compact,
             ),
             IconButton(
@@ -177,7 +177,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
                   );
                 });
               },
-              icon: Icon(Icons.chevron_right, color: Colors.blue),
+              icon: Icon(Icons.chevron_right, color: theme.colorScheme.primary),
               visualDensity: VisualDensity.compact,
             ),
           ],
@@ -204,7 +204,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xFF2196F3),
+        color: theme.colorScheme.primary,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
@@ -212,7 +212,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
           CircleAvatar(
             radius: 24,
             backgroundColor: Colors.white,
-            backgroundImage: AssetImage('assets/avatar.png'), // Use actual image
+            backgroundImage: AssetImage('assets/images/avatar.avif'),
             child: Container(), // Placeholder
           ),
           const SizedBox(width: 12),
@@ -270,7 +270,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
           CircleAvatar(
             radius: 24,
             backgroundColor: Colors.grey.shade200,
-            backgroundImage: AssetImage('assets/avatar.png'), // Use actual image
+            backgroundImage: AssetImage('assets/images/avatar.avif'),
             child: Container(), // Placeholder
           ),
           const SizedBox(width: 12),

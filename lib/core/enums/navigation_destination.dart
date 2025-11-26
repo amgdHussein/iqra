@@ -9,5 +9,6 @@ enum Destination {
   lessons,
   homework,
   progress,
+  syllabus,
   menu,
 }
